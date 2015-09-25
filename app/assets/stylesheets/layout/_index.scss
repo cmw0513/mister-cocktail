@@ -2,21 +2,3 @@
 @import "footer";
 @import "navbar";
 
-body {
-  background: image-url("cocktail.jpg");
-  background-size: cover;
-}
-h1 {
-  color: white;
-}
-.white-text {
-  color: white;
-}
-.fogged {
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 2px;
-}
-.alert {
-  background-color: rgba(130,0,0,.7);
-}

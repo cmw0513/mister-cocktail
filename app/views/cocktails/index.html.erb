@@ -1,5 +1,9 @@
 <h1>Ms. Cocktail suggests...</h1>
 <% @cocktails.each do |cocktail| %>
   <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+  <% if cocktail.picture %>
+    <%= image_tag cocktail.picture.url(:thumb) %>
+  <% end %>
+
 <% end %>
 <h3><%= link_to "Suggest a cocktail", new_cocktail_path %>

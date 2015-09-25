@@ -1,13 +1,13 @@
 <div class="text-center">
   <h1>Ms. Cocktail suggests...</h1>
 
-  <div class="container fogged">
+  <div class="container fogged shadowed">
     <div class="row">
       <% @cocktails.each do |cocktail| %>
         <% if cocktail.picture_file_name %>
           <div class="col-xs-12 col-md-4">
             <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-            <%= image_tag cocktail.picture.url(:thumb), class: "img-circle" %>
+            <%= image_tag cocktail.picture.url(:thumb), class: "img-circle shadowed" %>
           </div>
         <% end %>
       <% end %>

@@ -1,13 +1,13 @@
 <div class="text-center">
   <h4 class="white-text">How about a ...</h4>
-  <h1><%= @cocktail.name %></h1>
-  <div class="container fogged">
+  <h1 class="open-sans"><%= @cocktail.name.upcase %></h1>
+  <div class="container fogged shadowed">
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        <%= image_tag @cocktail.picture.url(:medium), class: "img-circle" %>
+        <%= image_tag @cocktail.picture.url(:medium), class: "img-circle shadowed" %>
       </div>
       <div class="col-xs-12 col-sm-6">
-        <h4>You'll need...</h4>
+        <p>You'll need...</p>
         <% @cocktail.doses.each do |dose| %>
           <h3><%= dose.ingredient.name %></h3>
           <p>(<%= dose.description %>)</p>

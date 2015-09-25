@@ -8,4 +8,6 @@ class Cocktail < ActiveRecord::Base
 
   validates_attachment_content_type :picture,
     content_type: /\Aimage\/.*\z/
+
+  validates :picture, presence: true
 end

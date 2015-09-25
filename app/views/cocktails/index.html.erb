@@ -4,12 +4,12 @@
   <div class="container fogged">
     <div class="row">
       <% @cocktails.each do |cocktail| %>
-        <div class="col-xs-12 col-md-4">
-        <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-        <% if cocktail.picture %>
-          <%= image_tag cocktail.picture.url(:thumb), class: "img-circle" %>
+        <% if cocktail.picture_file_name %>
+          <div class="col-xs-12 col-md-4">
+            <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+            <%= image_tag cocktail.picture.url(:thumb), class: "img-circle" %>
+          </div>
         <% end %>
-        </div>
       <% end %>
     </div>
   </div>

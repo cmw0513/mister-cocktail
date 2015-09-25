@@ -1,7 +1,7 @@
 <div class="text-center">
-  <h4>How about a</h4>
-  <h1><%= @cocktail.name.upcase %>!</h1>
-  <div class="container">
+  <h4 class="white-text">How about a ...</h4>
+  <h1><%= @cocktail.name.upcase %></h1>
+  <div class="container fogged">
     <div class="row">
       <div class="col-xs-12 col-sm-6">
         <%= image_tag @cocktail.picture.url(:medium), class: "img-circle" %>

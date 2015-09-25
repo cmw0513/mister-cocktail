@@ -1,9 +1,11 @@
-<h1>Suggest a Cocktail</h1>
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.error_notification %>
+<h1 class="text-center">Suggest a Cocktail</h1>
+<div class="fogged">
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.error_notification %>
 
-  <%= f.input :name %>
-  <%= f.input :picture %>
+    <%= f.input :name %>
+    <%= f.input :picture %>
 
-  <%= f.button :submit %>
-<% end %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

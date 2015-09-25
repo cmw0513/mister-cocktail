@@ -52,4 +52,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 
+# for file upload
 gem 'figaro'
+gem 'aws-sdk', '< 2.0'
+gem 'paperclip'

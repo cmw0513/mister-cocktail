@@ -1,19 +1,18 @@
 <div class="text-center">
-<h1>Ms. Cocktail suggests...</h1>
+  <h1>Ms. Cocktail suggests...</h1>
 
-<div class="container">
-  <div class="row">
-    <% @cocktails.each do |cocktail| %>
-      <div class="col-xs-12 col-md-4">
-      <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-      <% if cocktail.picture %>
-        <%= image_tag cocktail.picture.url(:thumb), class: "img-circle" %>
+  <div class="container">
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-12 col-md-4">
+        <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+        <% if cocktail.picture %>
+          <%= image_tag cocktail.picture.url(:thumb), class: "img-circle" %>
+        <% end %>
+        </div>
       <% end %>
-      </div>
-    <% end %>
+    </div>
   </div>
-</div>
 
-<h3><%= link_to "Suggest a cocktail", new_cocktail_path, class: "btn btn-primary" %></h3>
-
+  <h3><%= link_to "Suggest a cocktail", new_cocktail_path, class: "btn btn-primary" %></h3>
 </div>
